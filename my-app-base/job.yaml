@@ -11,7 +11,7 @@ spec:
       containers:
       - name: echo
         image: alpine
-        command: ["echo",  "This is a start!","&&", "date"]
+        command: ["sh",  "-c","echo this is start && date"]
       restartPolicy: Never
   backoffLimit: 4
 
