@@ -2,6 +2,6 @@
 namespace: staging
 images:
   - name: hibacha/nginx
-    newTag: 0.1.1
+    newTag: 0.1.2
 resources:
   - ../../../my-app-base
