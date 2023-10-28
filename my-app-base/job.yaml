@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: echo
+  generateName: my-test-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  template:
+    spec:
+      containers:
+      - name: echo
+        image: alpine
+        command: ["echo",  "This is a start!"]
+      restartPolicy: Never
+  backoffLimit: 4
+
