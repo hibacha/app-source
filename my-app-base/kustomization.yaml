@@ -6,4 +6,4 @@ metadata:
 resources:
   - deployment.yaml
   - namespace.yaml
-#  - job.yaml
+  - job.yaml

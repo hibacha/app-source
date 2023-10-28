@@ -3,14 +3,14 @@ kind: Job
 metadata:
   generateName: my-test-
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook: PostSync
 spec:
   template:
     spec:
       containers:
       - name: echo
         image: alpine
-        command: ["echo",  "This is a start!"]
+        command: ["echo",  "This is a start!","&&", "date"]
       restartPolicy: Never
   backoffLimit: 4
 
